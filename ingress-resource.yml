@@ -1,0 +1,25 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-demo
+
+spec:
+  backend:
+    serviceName: voting-app-service
+    servicePort: 80
+
+---
+#apiVersion: extensions/v1beta1
+#kind: Ingress
+#metadata:
+#  name: ingress-path
+#
+#spec:
+#  rules:
+#    - http:
+#        paths:
+#          - path: /vote
+#            backend:
+#              serviceName: voting-app-service
+#              servicePort: 80
+#
